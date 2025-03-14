@@ -1,3 +1,7 @@
+/*
+gcc -Wall -Werror -Wextra -pedantic -std=c99 name.c -o name
+*/
+
 #include <stdlib.h>  /* exit() y EXIT_FAILURE */
 #include <stdio.h>   /* printf(), scanf()     */
 #include <stdbool.h> /* Tipo bool             */
@@ -40,9 +44,17 @@ char get_winner(char board[3][3])
 bool has_free_cell(char board[3][3])
 {
     bool free_cell=false;
-    //
-    // TODO: COMPLETAR
-    //
+    
+        for(int i = 0; i < 3; i++) 
+        {
+            for(int j = 0; j<3; j++) 
+            {
+                if(board[i][j] == '-') 
+                {
+                    free_cell = true;
+                }
+            }
+        }
     return free_cell;
 }
 
