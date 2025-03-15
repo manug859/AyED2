@@ -5,7 +5,6 @@ gcc -Wall -Werror -Wextra -pedantic -std=c99 name.c -o name
 #include <stdlib.h>  /* exit() y EXIT_FAILURE */
 #include <stdio.h>   /* printf(), scanf()     */
 #include <stdbool.h> /* Tipo bool             */
-
 #include <assert.h>  /* assert() */
 
 #define CELL_MAX (3 * 3 - 1)
@@ -35,26 +34,40 @@ void print_board(char board[3][3])
 char get_winner(char board[3][3])
 {
     char winner = '-';
-    //
-    // TODO: COMPLETAR
-    //
+    for(int i=0; i<3; i++) {
+        bool row_winner = true; bool col_winner = true;
+            for(int j = 0; j<3; j++) {
+                if(board[i][j] != board[i][0] || board[i][0] == '-') {
+                    row_winner = false;
+                }
+                if(board[j][i] != board[0][i] || board[0][i] == '-') {
+                    col_winner = false;
+                } 
+            }
+            if(row_winner) {
+                winner = board[i][0];
+            }
+            if(col_winner) {
+                winner = board[0][i];
+            }
+    } 
     return winner;
-}
+} // TO DO: DIAGONAL.
 
 bool has_free_cell(char board[3][3])
 {
     bool free_cell=false;
     
-        for(int i = 0; i < 3; i++) 
+    for(int i=0; i<3 && !free_cell; i++) 
+    {
+        for(int j=0; j<3 && !free_cell; j++) 
         {
-            for(int j = 0; j<3; j++) 
+            if(board[i][j] == '-') 
             {
-                if(board[i][j] == '-') 
-                {
-                    free_cell = true;
-                }
+                free_cell = true;
             }
         }
+    }
     return free_cell;
 }
 
