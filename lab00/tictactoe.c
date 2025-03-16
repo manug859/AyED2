@@ -61,7 +61,7 @@ char get_winner(char board[3][3])
     }
     if(diagonal_l) 
     {
-        winner = board[0][0];
+        winner = edge_l;
     } 
     if(diagonal_r)
     {
