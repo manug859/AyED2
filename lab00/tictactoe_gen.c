@@ -71,7 +71,7 @@ char get_winner(char board[N][N])
         winner = edge_r;
     }
     return winner;
-} // TO DO: DIAGONAL.
+}
 
 bool has_free_cell(char board[N][N])
 {
