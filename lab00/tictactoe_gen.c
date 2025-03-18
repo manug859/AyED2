@@ -7,7 +7,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=c99 name.c -o name
 #include <stdbool.h> /* Tipo bool             */
 #include <assert.h>  /* assert() */
 
-#define N 3
+#define N 5
 
 #define CELL_MAX (N * N - 1)
 
