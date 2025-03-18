@@ -36,32 +36,39 @@ void print_board(char board[N][N])
 
 char get_winner(char board[N][N])
 {
-    char winner = '-';
-    char edge_l = board[0][0]; char edge_r = board[0][N-1];
-    bool diagonal_l = true; bool diagonal_r = true;
-    for(int i=0; i<N; i++) {
+    char winner = '-'; 
+    char edge_l = board[0][0]; char edge_r = board[0][N-1]; // 
+    bool diagonal_l = true; bool diagonal_r = true; 
+    for(int i=0; i<N; i++) 
+    {
         bool row_winner = true; bool col_winner = true;
-            for(int j = 0; j<N; j++) {
-                if(board[i][j] != board[i][0] || board[i][0] == '-') {
+            for(int j = 0; j<N; j++) 
+            {
+                if(board[i][j] != board[i][0] || board[i][0] == '-') 
+                {
                     row_winner = false;
                 }
-                if(board[j][i] != board[0][i] || board[0][i] == '-') {
+                if(board[j][i] != board[0][i] || board[0][i] == '-') 
+                {
                     col_winner = false;
                 }
-                if(board[i][i] != edge_l) {
+                if(board[i][i] != edge_l) 
+                {
                     diagonal_l = false;
                 }
                 if(board[i][N-1-i] != edge_r) {
                     diagonal_r = false;
                 }
             }
-            if(row_winner) {
+            if(row_winner) 
+            {
                 winner = board[i][0];
             }
-            if(col_winner) {
+            if(col_winner) 
+            {
                 winner = board[0][i];
             }
-    }
+    } 
     if(diagonal_l) 
     {
         winner = edge_l;
@@ -75,19 +82,19 @@ char get_winner(char board[N][N])
 
 bool has_free_cell(char board[N][N])
 {
-    bool free_cell=false;
+    bool free_cell=false; 
     
-    for(int i=0; i<N && !free_cell; i++) 
+    for(int i=0; i<N && !free_cell; i++) //recorro el tablero para ver si hay alguna casilla libre
     {
         for(int j=0; j<N && !free_cell; j++) 
         {
-            if(board[i][j] == '-') 
+            if(board[i][j] == '-') //si encuentro una casilla libre, devuelvo true
             {
                 free_cell = true;
             }
         }
     }
-    return free_cell;
+    return free_cell; 
 }
 
 int main(void)
@@ -96,7 +103,7 @@ int main(void)
 
     char board[N][N];
 
-    for(int i=0; i<N; i++)
+    for(int i=0; i<N; i++) //inicializo todas las casillas con '-' 
     {
         for(int j=0; j<N; j++)
         {
@@ -104,7 +111,7 @@ int main(void)
         }
     }
 
-    for(int i=0; i<N; i++)
+    for(int i=0; i<N; i++) // imprimo el tablero
     {
         for(int j=0; j<N; j++)
         {
