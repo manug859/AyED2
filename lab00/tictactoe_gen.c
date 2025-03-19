@@ -37,7 +37,7 @@ void print_board(char board[N][N])
 char get_winner(char board[N][N])
 {
     char winner = '-'; 
-    char edge_l = board[0][0]; char edge_r = board[0][N-1]; // 
+    char edge_l = board[0][0]; char edge_r = board[0][N-1]; 
     bool diagonal_l = true; bool diagonal_r = true; 
     for(int i=0; i<N; i++) 
     {
@@ -56,18 +56,19 @@ char get_winner(char board[N][N])
                 {
                     diagonal_l = false;
                 }
-                if(board[i][N-1-i] != edge_r) {
+                if(board[i][N-1-i] != edge_r) 
+                {
                     diagonal_r = false;
                 }
             }
-            if(row_winner) 
-            {
-                winner = board[i][0];
-            }
-            if(col_winner) 
-            {
-                winner = board[0][i];
-            }
+        if(row_winner) 
+        {
+            winner = board[i][0];
+        }
+        if(col_winner) 
+        {
+            winner = board[0][i];
+        }
     } 
     if(diagonal_l) 
     {
