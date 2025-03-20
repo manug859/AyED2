@@ -52,21 +52,13 @@ char get_winner(char board[3][3])
                     diagonal_r = false;
                 }
             }
-            if(row_winner) {
-                winner = board[i][0];
-            }
-            if(col_winner) {
-                winner = board[0][i];
-            }
+            if(row_winner) winner = board[i][0];
+            if(col_winner) winner = board[0][i];
+
     }
-    if(diagonal_l) 
-    {
-        winner = edge_l;
-    } 
-    if(diagonal_r)
-    {
-        winner = edge_r;
-    }
+    if(diagonal_l) winner = edge_l;
+    if(diagonal_r) winner = edge_r;
+    
     return winner;
 }
 
