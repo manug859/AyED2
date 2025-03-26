@@ -13,6 +13,7 @@ static void insert(int a[], unsigned int i, unsigned int length) {
         while(j > 0 && goes_before(a[j], a[j-1])) {
             swap(a, j-1, j);
             j--;
+            array_dump(a, length);
         }
 }
 
