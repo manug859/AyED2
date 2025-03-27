@@ -1,0 +1,10 @@
+lab01/gen
+lab01/ej2/array_helpers.o
+lab01/ej2/main.o
+lab01/ej2/sort_helpers.o
+lab01/ej2/sort.o
+lab01/ej2/sort_helpers.o
+lab01/ej2/sorter
+lab01/input/example-unsorted.in
+lab01/input/unsorted-100.in
+lab01/array_generator.c

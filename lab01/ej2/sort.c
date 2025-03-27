@@ -9,11 +9,11 @@
 
 static void quick_sort_rec(int a[], unsigned int izq, unsigned int der) {
 
-    int pivot;
+    unsigned int pivot;
 
         if(der > izq) {
             pivot = partition(a, izq, der);
-            quick_sort_rec(a, izq, (pivot+1));
+            quick_sort_rec(a, izq, (pivot == 0) ? 0 : pivot-1);
             quick_sort_rec(a, (pivot+1), der);
         }
 }
