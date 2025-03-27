@@ -9,7 +9,7 @@
 
 static void quick_sort_rec(int a[], unsigned int izq, unsigned int der) {
 
-    unsigned int pivot;
+    int pivot;
 
         if(der > izq) {
             pivot = partition(a, izq, der);
@@ -20,6 +20,5 @@ static void quick_sort_rec(int a[], unsigned int izq, unsigned int der) {
 
 void quick_sort(int a[], unsigned int length) {
     quick_sort_rec(a, 0, (length == 0) ? 0 : length - 1);
-    array_dump(a, length);
 }
 
