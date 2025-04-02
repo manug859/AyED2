@@ -8,3 +8,7 @@ lab01/ej2/sorter
 lab01/input/example-unsorted.in
 lab01/input/unsorted-100.in
 lab01/array_generator.c
+lab01/ej3/array_helpers.o
+lab01/ej3/main.o
+.gitignore
+.gitignore
