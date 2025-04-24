@@ -60,7 +60,7 @@ void max_rainfall(WeatherTable table, int res[YEARS][MONTHS])
             {
                 if (max_rainfall_monthly < table[year][month][day]._rainfall)
                 {
-                    max_rainfall_monthly = table[year][month][day]._rainfall;
+                    max_rainfall_monthly = month;
                 }
             }
             res[year][month] = max_rainfall_monthly;
