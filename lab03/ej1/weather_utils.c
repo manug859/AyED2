@@ -19,7 +19,7 @@ int min_abs(WeatherTable table) {
     return res;
 } 
 
-void max_temp(WeatherTable table, int res[]) {
+void max_temp(WeatherTable table, int output[YEARS]) {
     
     for(unsigned int year = 0; year < YEARS; year++) {
         int max_temp_aux = table[year][0][0]._max_temp;
@@ -30,10 +30,10 @@ void max_temp(WeatherTable table, int res[]) {
                 }
             }
         }
-        res[year] = max_temp_aux;
+        output[year] = max_temp_aux;
     }
     for(int i = 0; i < YEARS; i++) {
-        printf("año = %d, max_temp = %d\n",i+1980, res[i]);
+        printf("año = %d, max_temp = %d\n",i+1980, output[i]);
     }
 }
 
