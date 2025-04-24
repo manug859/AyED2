@@ -40,7 +40,7 @@ void max_temp(WeatherTable table, int output[YEARS]) {
 void max_rainfall(WeatherTable table, int res[YEARS][MONTHS]) {
    
    for(unsigned int year = 0; year < YEARS; year++) {
-    unsigned int max_rainfall_anually = table[year][0][0]._rainfall;
+    unsigned int max_rainfall_anually = 0;
        for(unsigned int month = january; month <= december; month++) {
         unsigned int max_rainfall_monthly = table[year][month][0]._rainfall;
             for(unsigned int day = 0; day < DAYS; day++) {
