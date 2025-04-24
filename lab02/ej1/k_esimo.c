@@ -19,9 +19,20 @@ void swap(int a[], int i, int j);
  */
 int k_esimo(int a[], int length, int k) {
 
-    
+    int pivot;
+    int izq = 0;
+    int der = length - 1;
+    pivot = partition(a, izq, der);
 
-    return 0;
+    while (pivot != k) {
+        if (pivot < k) {
+            izq = pivot + 1;
+        } else {
+            der = pivot - 1;
+        }
+        pivot = partition(a, izq, der);
+    }
+    return a[k];
 }
 
 int partition(int a[], int izq, int der) {

@@ -17,7 +17,11 @@
  */
 int cima_log(int a[], int length) {
 
+<<<<<<< HEAD
     // COMPLETAR!!
+=======
+    
+>>>>>>> f8f5f07 (push masivo)
 
     return 0;
 }
