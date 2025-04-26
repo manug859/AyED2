@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #include "weather.h"
 
-
 Weather weather_from_file(FILE* file)
 {
     Weather weather;

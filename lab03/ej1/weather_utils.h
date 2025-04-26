@@ -6,8 +6,8 @@
 
 int min_abs(WeatherTable table);
 
-void max_temp(WeatherTable table, int res[]);
+void max_temp(WeatherTable table, int output[YEARS]);
 
-void max_rainfall(WeatherTable table, int res[YEARS][MONTHS]);
+void max_rainfall(WeatherTable table, int output[MONTHS]);
 
 #endif

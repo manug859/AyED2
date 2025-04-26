@@ -81,7 +81,7 @@ int main(int argc, char *argv[]) {
     max_temp(table, max_temp_array);
 
     /*show max rainfall for every month for every year*/
-    int max_rainfall_array[YEARS][MONTHS];
+    int max_rainfall_array[MONTHS];
     max_rainfall(table, max_rainfall_array);
 
     return EXIT_SUCCESS;

@@ -48,30 +48,34 @@ void max_temp(WeatherTable table, int output[YEARS])
     }
 }
 
-void max_rainfall(WeatherTable table, int res[YEARS][MONTHS])
+void max_rainfall(WeatherTable table, int output[MONTHS])
 {
-
     for (unsigned int year = 0; year < YEARS; year++)
     {
+        unsigned int max_rainfall = 0;
+        unsigned int max_month = 0;
+
         for (unsigned int month = january; month <= december; month++)
         {
-            unsigned int max_rainfall_monthly = table[year][month][0]._rainfall;
+            unsigned int monthly_rainfall = 0;
+
             for (unsigned int day = 0; day < DAYS; day++)
             {
-                if (max_rainfall_monthly < table[year][month][day]._rainfall)
-                {
-                    max_rainfall_monthly = month;
-                }
+                monthly_rainfall += table[year][month][day]._rainfall;
             }
-            res[year][month] = max_rainfall_monthly;
+
+            if (monthly_rainfall > max_rainfall)
+            {
+                max_rainfall = monthly_rainfall;
+                max_month = month;
+            }
         }
+
+        output[year] = max_month;
     }
 
-    for (int years = 0; years < YEARS; years++)
+    for (int year = 0; year < YEARS; year++)
     {
-        for (int months = january; months <= december; months++)
-        {
-            printf("año[%d] --> mes[%d] --> precipitacion = %d\n", years + 1980, months + 1, res[years][months]);
-        }
+        printf("Año %d --> Mes con más lluvia: %d\n", year + 1980, output[year]);
     }
 }

@@ -8,22 +8,13 @@
  * Un arreglo tiene cima si existe una posición k tal que el arreglo es
  * estrictamente creciente hasta la posición k y estrictamente decreciente
  * desde la posición k.
-<<<<<<< HEAD
-=======
  * 
  * 
->>>>>>> f8f5f07 (push masivo)
  *
  * @param a Arreglo.
  * @param length Largo del arreglo.
  */
 bool tiene_cima(int a[], int length) {
-<<<<<<< HEAD
-
-    // COMPLETAR!!
-
-    return false;
-=======
     
     int k = 0;
 
@@ -42,7 +33,6 @@ bool tiene_cima(int a[], int length) {
     res = j == length - 1;
 
     return res;
->>>>>>> f8f5f07 (push masivo)
 }
 
 /**
@@ -59,12 +49,6 @@ bool tiene_cima(int a[], int length) {
  */
 int cima(int a[], int length) {
 
-<<<<<<< HEAD
-    // COMPLETAR!!
-
-    return 0;
-}
-=======
     int k = 0;
 
     while(k < length - 1 && a[k] < a[k+1]) {
@@ -73,4 +57,3 @@ int cima(int a[], int length) {
       
     return k;
 }
->>>>>>> f8f5f07 (push masivo)
