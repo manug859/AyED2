@@ -21,7 +21,7 @@ int main(void) {
             }
         }
     }
-    printf("t = %d\n", t);
+    printf("t != %d\n", t);
 
     return EXIT_SUCCESS;
 }
