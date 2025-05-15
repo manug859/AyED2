@@ -1,6 +1,7 @@
 {
     "files.associations": {
-        "assert.h": "c"
+        "assert.h": "c",
+        "strfuncs.h": "c"
     },
     "github.copilot.enable": {
         "*": false,

@@ -39,6 +39,9 @@ int * array_from_file(const char *filepath, size_t *length) {
     //            - Cambiar el valor de *length para que contenga el tamaño del
     //              arreglo.
     //
+    array = malloc(sizeof(size));
+    *length = size;
+
     if (size > 0 && array == NULL) {
         fprintf(stderr, "Not enough memory\n");
         exit(EXIT_FAILURE);
