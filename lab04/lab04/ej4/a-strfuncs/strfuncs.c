@@ -14,11 +14,11 @@ size_t string_length(const char *str) {
 
 char *string_filter(const char *str, char c) {
 
-   char *str_copy;
-   str_copy = malloc(sizeof(str));
+   char *str_copy = NULL;                   
+   str_copy = malloc(string_length(str));   
    
-   size_t i = 0;
-   size_t j = 0;
+   size_t i = 0;                            
+   size_t j = 0;                       
 
    size_t length = string_length(str); 
 
@@ -32,7 +32,6 @@ char *string_filter(const char *str, char c) {
 
     return str_copy;
 }
-
 
 bool string_is_symmetric(const char *str) {
     size_t length = string_length(str);
