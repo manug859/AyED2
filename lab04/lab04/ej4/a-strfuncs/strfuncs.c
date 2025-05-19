@@ -36,7 +36,7 @@ char *string_filter(const char *str, char c) {
 bool string_is_symmetric(const char *str) {
     size_t length = string_length(str);
     bool res = true;
-    for(int i = 0, j = length - 1; i < j && res; i++, j--) {
+    for(int i = 0, j = length - 1; i < j; i++, j--) {
         res = str[i] == str[j] && res;
     }
     return res;
