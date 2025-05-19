@@ -1,24 +1,7 @@
-lab01/gen
-lab01/ej2/array_helpers.o
-lab01/ej2/main.o
-lab01/ej2/sort_helpers.o
-lab01/ej2/sort.o
-lab01/ej2/sort_helpers.o
-lab01/ej2/sorter
-lab01/input/example-unsorted.in
-lab01/input/unsorted-100.in
-lab01/array_generator.c
-lab01/ej3/array_helpers.o
-lab01/ej3/main.o
-.gitignore
-.gitignore
-lab01/ej3/sort.o
+# Omitir los objetos `outputs` de c.
 
-lab01/ej4/array_helpers.o
-lab01/ej4/main.o
-lab01/ej4/sorter
-lab01/ej4/sort.o
-lab01/ej5/array_helpers.o
-lab01/ej5/sort.o
-lab01/ej5/main.o
-lab01/ej3/sort.o
+*.o
+
+# Omitir ejecutables
+
+*.exe
