@@ -15,15 +15,15 @@ print_data(data_t d) {
 
 int main(void) {
 
-    data_t *p = NULL;
+    data_t *p = NULL; // puntero a la estructura
 
-    data_t messi = {"Leo Messi", 36, 169};
+    data_t messi = {"Leo Messi", 36, 169}; // inicializo la estructura
     
-    p = malloc(sizeof(data_t));
+    p = malloc(sizeof(data_t));  // asigno memoria para la estructura
     
-    strcpy(p->name, messi.name);
-    p->age = 36;
-    p->height = 169;
+    strcpy(p->name, messi.name); // copio el nombre
+    p->age = 36;                 // asigno la edad
+    p->height = 169;             // asigno la altura
 
 
     

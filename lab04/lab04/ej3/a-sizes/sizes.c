@@ -2,11 +2,9 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-
 #include "data.h"
 
-void
-print_data(data_t d) {
+void print_data(data_t d) {
     printf("NOMBRE: %s\n"
            "EDAD  : %d años\n"
            "ALTURA: %d cm\n\n",
@@ -32,7 +30,5 @@ int main(void) {
     printf("El índice de memoria de messi.age es indice: %lu direccion: %p\n", (uintptr_t) &messi.age, (void *)&messi.age);
     printf("El índice de memoria de messi.height es indice: %lu direccion: %p\n", (uintptr_t) &messi.height, (void *)&messi.height);
     
-    
-
     return EXIT_SUCCESS;
 }

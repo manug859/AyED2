@@ -9,7 +9,11 @@ void swap(int *a, int *b) {
     *a = *b;
     *b = t;
 
-} //end proc
+} 
+/* 
+    Implementacion de la funcion swap con punteros.
+    Se intercambian los valores de las variables a y b.
+*/
 
 int main(void) {
     

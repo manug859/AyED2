@@ -12,7 +12,7 @@ void absolute(int x, int *y) {
 
 int main(void) {
     int a=0, res=0;  // No modificar esta declaración
-    // --- No se deben declarar variables nuevas ---
+    // --- No se deben declarar variables nuevas --- //
 
     absolute(a, &res);
     printf("res = %d \n", res);
