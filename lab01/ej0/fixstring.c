@@ -1,6 +1,5 @@
 #include <stdbool.h>
 #include <assert.h>
-/* gonzalo.peralta@unc.edu.ar */
 #include "fixstring.h"
 
 unsigned int fstring_length(fixstring s) {
