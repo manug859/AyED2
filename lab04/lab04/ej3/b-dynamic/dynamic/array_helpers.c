@@ -34,11 +34,7 @@ int * array_from_file(const char *filepath, size_t *length) {
         exit(EXIT_FAILURE);
     }
     int *array=NULL;
-    //
-    // COMPLETAR: - Reservar memoria para array
-    //            - Cambiar el valor de *length para que contenga el tamaño del
-    //              arreglo.
-    //
+
     array = malloc(sizeof(size));
     *length = size;
 
