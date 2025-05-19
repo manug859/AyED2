@@ -5,7 +5,7 @@
 #include "strfuncs.h"
 
 size_t string_length(const char *str) {
-    unsigned long length = 0;
+    size_t length = 0;
     while(str[length] != '\0') {
         length++;
     }
