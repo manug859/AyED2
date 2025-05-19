@@ -2,6 +2,10 @@
 
 *.o
 
-# Omitir ejecutables
+# Omitir ejecutables.
 
 *.exe
+
+# Omitir json.
+
+*.json
