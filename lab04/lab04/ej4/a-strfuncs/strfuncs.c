@@ -29,7 +29,7 @@ char *string_filter(const char *str, char c) {
         }
         i++;
     }
-
+    str_copy[j] = '\0';
     return str_copy;
 }
 
