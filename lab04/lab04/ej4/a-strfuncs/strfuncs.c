@@ -30,6 +30,9 @@ char *string_filter(const char *str, char c) {
         i++;
     }
     str_copy[j] = '\0';
+    
+    str_copy = realloc(str_copy, j + 1); // +1 para el '\0'
+    
     return str_copy;
 }
 
