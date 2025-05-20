@@ -1,3 +1,1 @@
-# Lab Solutions
-
-Solutions to laboratory exercises from the course *Algoritmos y Estructuras de Datos 2* at FaMAF, Universidad Nacional de Córdoba.
+# Soluciones del laboratorio de AyED 2 2025
