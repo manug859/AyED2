@@ -13,7 +13,7 @@ typedef int list_elem;
 list empty(void);
 
 /* Agrega el elemento e al comienzo de la lista */
-list addl (list_elem);
+list addl (list_elem e);
 
 /* Libera memoria en caso que sea necesario */
 void destroy(list l);
@@ -32,7 +32,7 @@ list_elem head(list l);
 list tail(list l);
 
 /* agrega el elemento e al final de la lista l */
-list addr(list l, list_elem);
+list addr(list l, list_elem e);
 
 /* Devuelve la cantidad de elementos de la lista l */
 unsigned int length(list l);
@@ -42,7 +42,7 @@ list concat(list l, list l0);
 
 /* Devuelve el n-ésimo elemento de la lista l */
 /* PRE: length(l) > n */
-unsigned int index(list l, int index);
+unsigned int index(list l, int i);
 /* Deja en l sólo los primeros n elementos, eliminando el resto */
 list take(list l, int n);
 

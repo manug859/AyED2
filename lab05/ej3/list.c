@@ -13,3 +13,7 @@ list empty(void) {
     l->elem = 0;
     return l;
 }
+
+list addl(list_elem e) {
+    
+}
