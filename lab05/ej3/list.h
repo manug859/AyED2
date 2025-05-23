@@ -42,7 +42,8 @@ list concat(list l, list l0);
 
 /* Devuelve el n-ésimo elemento de la lista l */
 /* PRE: length(l) > n */
-unsigned int index(list l, int i);
+unsigned int index(list l, int n);
+
 /* Deja en l sólo los primeros n elementos, eliminando el resto */
 list take(list l, int n);
 
