@@ -4,7 +4,12 @@
 
 #include "list.h"
 
-struct _list
-{
-    list_elem;
+struct _list {
+    list_elem elem;
 };
+
+list empty(void) {
+    list l = malloc(sizeof(list));
+    l->elem = 0;
+    return l;
+}
