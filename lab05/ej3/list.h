@@ -23,7 +23,6 @@ void destroy(list l);
 /* Devuelve True si l es vacía */
 bool is_empty(list l);
 
-
 /* Devuelve el primer elemento de la lista l */
 /* PRE: not is_empty(l) */
 list_elem head(list l);
