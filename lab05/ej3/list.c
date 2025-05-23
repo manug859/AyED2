@@ -4,3 +4,7 @@
 
 #include "list.h"
 
+struct _list
+{
+    list_elem;
+};

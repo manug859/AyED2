@@ -3,11 +3,11 @@
 
 #include <stdbool.h>
 
-/* Elemento de lista */
-typedef int list_elem;
-
 /* Garantiza el encapsulamiento */
 typedef struct _list * list;
+
+/* Elemento de lista */
+typedef int list_elem;
 
 /* Crea una lista vacía */
 list empty(void);
