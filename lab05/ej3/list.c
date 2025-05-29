@@ -6,14 +6,14 @@
 
 struct _list {
     list_elem elem;
+    struct _node* next;
 };
 
 list empty(void) {
-    list l = malloc(sizeof(list));
-    l->elem = 0;
+    list l = NULL;
     return l;
 }
 
-list addl(list_elem e) {
+list addl(l, e) {
     
 }

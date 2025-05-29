@@ -13,7 +13,7 @@ typedef int list_elem;
 list empty(void);
 
 /* Agrega el elemento e al comienzo de la lista */
-list addl (list_elem e);
+list addl (list l, list_elem e);
 
 /* Libera memoria en caso que sea necesario */
 void destroy(list l);
