@@ -14,6 +14,10 @@ list empty(void) {
     return l;
 }
 
-list addl(l, e) {
-    
+list addl(list l, list_elem e) {
+    list p = malloc(sizeof(list));
+    p->elem = e;
+    p->next = l;
+    p = l;
+    return l;
 }
