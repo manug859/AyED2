@@ -77,13 +77,18 @@ int length(list l) {
 }
 
 list concat(list l, list l0) {
-    list p = l;
+    list res = l;
 
-    while (p->next != NULL) {
-        p = p->next;
+    if(l == NULL) {
+        res = l0;
+    } else {
+        list p = l;
+        while (p->next != NULL) {
+            p = p->next;
+        }
+        p->next = l0;
     }
-    p->next = l0;
-    return l;
+    return res;
 }
 
 list_elem index(list l, int n) {
