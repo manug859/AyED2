@@ -115,12 +115,10 @@ list take(list l, int n) {
     }
     return l;
 }
-
-list copy_list(list l)
-{
+list copy_list(list l) {
     if (l == NULL) return NULL;
 
-    list result = NULL; // Nueva lista
+    list result = NULL; // Cabeza de la nueva lista
     list last = NULL;   // Último nodo agregado
     list current = l;   // Recorre la lista original
 
@@ -139,8 +137,10 @@ list copy_list(list l)
         } else {
             last->next = new_node;
         }
+
         last = new_node;
         current = current->next;
     }
+
     return result;
 }

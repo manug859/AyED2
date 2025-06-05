@@ -31,30 +31,21 @@ char *parse_filepath(int argc, char *argv[]) {
     return (result);
 }
 
-
 float average(list l) {
     float r = 0.0;
-    unsigned int largo;
-    list_elem elem;
-    list laux;
-
-    largo = length(l);
-    laux = copy_list(l);
-
-    while(!is_empty(l)){
-        elem = head(laux);
-        r += elem;
-        tail(laux);
+    unsigned int largo = length(l);
+    list laux = copy_list(l); 
+    while (!is_empty(laux)) {
+        r += head(laux);
+        laux = tail(laux);
     }
-    destroy(laux);
-    r = r / largo;
-    return r;
+    return r = r / largo;
 }
 
 list array_to_list(int array[], unsigned int length) {
     list p = empty();
     for (unsigned int i = 0u; i < length; ++i) {
-        addr(p, array[i]);        
+        p = addr(p, array[i]);        
     }
     return p;
 }
