@@ -36,14 +36,15 @@ float average(list l) {
 /*
     Needs implementation.
 */
+return 1.0;
 }
 
 list array_to_list(int array[], unsigned int length) {
-    /* Initialize the list */
+    list p = empty();
     for (unsigned int i = 0u; i < length; ++i) {
-        /* Add element to the list  */
+        addr(p, array[i]);        
     }
-    /* Return list */
+    return p;
 }
 
 int main(int argc, char *argv[]) {

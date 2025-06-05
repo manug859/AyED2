@@ -1,14 +1,15 @@
 #include <assert.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
 #include <assert.h>
 
 #include "list.h"
 
-struct _list {
+typedef struct _node {
     list_elem elem;
     struct _node* next;
-};
+} node;
 
 list empty(void) {
     list l = NULL;
@@ -16,7 +17,7 @@ list empty(void) {
 }
 
 list addl(list l, list_elem e) {
-    list p = malloc(sizeof(struct _list));
+    list p = malloc(sizeof(node));
     p->elem = e;
     p->next = l;
     return p;
@@ -44,12 +45,12 @@ list_elem head(list l) {
 list tail(list l) {
     list p = l;
     l = l->next;
-    free(p);
+    free(p); 
     return l;
 }
 
 list addr(list l, list_elem e) {
-    list q = malloc(sizeof(struct _list));
+    list q = malloc(sizeof(node));
     q->elem = e;
     q->next = NULL;
     if(!is_empty(l)){
@@ -65,7 +66,7 @@ list addr(list l, list_elem e) {
     return l;
 }
 
-int length(list l) {
+unsigned int length(list l) {
     int n = 0;
     list p = l;
 
@@ -137,7 +138,8 @@ list drop(list l, int n) {
     if(l == NULL) {
         return l;
     }
-    
+   
+    TERMINAR!!
     
     list p = l;
     list q = NULL;
