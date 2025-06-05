@@ -100,11 +100,17 @@ list_elem index(list l, int n) {
 }
 
 list take(list l, int n) {
-    list p = l;
-    for(int i = 0; i < n; i++) {
-        p = p->next;
+    if(n == 0) {
+        destroy(l);
+        l = NULL;
+    } else {
+        list p = l;
+        for(int i = 1; i < n; i++) {
+            p = p->next;
+        }
+        list rest = p->next;
+        p->next = NULL;
+        destroy(rest);
     }
-    destroy(p);
     return l;
 }
-
