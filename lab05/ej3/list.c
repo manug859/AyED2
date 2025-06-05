@@ -116,37 +116,31 @@ list take(list l, int n) {
     return l;
 }
 
-list drop(list l, int n) {
-    int len = length(l);
-    if(n >= len) {
-        destroy(l);
-        l = NULL;
-    } else {
-        list p = l;
-        for(int i = 0; i < n; i++) {
-            list temp = p;
-            p = p->next;
-            free(temp);
+list copy_list(list l)
+{
+    if (l == NULL) return NULL;
+
+    list result = NULL; // Nueva lista
+    list last = NULL;   // Último nodo agregado
+    list current = l;   // Recorre la lista original
+
+    while (current != NULL) {
+        list new_node = malloc(sizeof(node));
+        if (new_node == NULL) {
+            printf("Error: no se pudo asignar memoria.\n");
+            destroy(result);
+            exit(1);
         }
-        l = p;
-    }   
-    return l;
+        new_node->elem = current->elem;
+        new_node->next = NULL;
+
+        if (result == NULL) {
+            result = new_node;
+        } else {
+            last->next = new_node;
+        }
+        last = new_node;
+        current = current->next;
+    }
+    return result;
 }
-
-/*list copy_list(list l) {
-    
-    if(l == NULL) {
-        return l;
-    }
-   
-    TERMINAR!!
-    
-    list p = l;
-    list q = NULL;
-
-    while(p != NULL) {
-        q->elem = p->elem;
-        q->next = p->next;
-    }
-    return q;
-}*/
