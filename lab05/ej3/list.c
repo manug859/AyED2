@@ -114,3 +114,21 @@ list take(list l, int n) {
     }
     return l;
 }
+
+list drop(list l, int n) {
+    int len = length(l);
+    if(n >= len) {
+        destroy(l);
+        l = NULL;
+    } else {
+        list p = l;
+        for(int i = 0; i < n; i++) {
+            list temp = p;
+            p = p->next;
+            free(temp);
+        }
+        l = p;
+    }   
+    return l;
+}
+
