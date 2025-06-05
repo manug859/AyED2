@@ -132,3 +132,19 @@ list drop(list l, int n) {
     return l;
 }
 
+/*list copy_list(list l) {
+    
+    if(l == NULL) {
+        return l;
+    }
+    
+    
+    list p = l;
+    list q = NULL;
+
+    while(p != NULL) {
+        q->elem = p->elem;
+        q->next = p->next;
+    }
+    return q;
+}*/
