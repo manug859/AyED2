@@ -25,6 +25,12 @@ int main() {
 
     };
 
+    /*osea 
+    7 --> queda 9
+    7 --> queda 2
+    2 --> queda 0
+    */
+
     int result;
 
     printf("TESTING change\n");
