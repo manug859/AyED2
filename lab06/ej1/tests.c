@@ -16,8 +16,8 @@ int main() {
 
     // casos de test (uno por línea): { d, n, k, result }
     struct testcase tests[N_TESTCASES] = {
-      { {4, 2, 7}, 3, 16, 3 },    // testea: change({4,2,7}, 3, 16) == 3
       { {1, 3, 4}, 3, 6, 2},        // testea: change({1,3,4}, 3, 6) == 2
+      { {4, 2, 7}, 3, 16, 3 },    // testea: change({4,2,7}, 3, 16) == 3
       { {5, 7}, 2, 3, -1},     // testea: change({5,7}, 2, 3) == -1 (no se puede pagar)
       { {1, 2, 5}, 3, 11, 3 },     // testea: change({1,2,5}, 3, 11) == 3
       { {2, 5, 10}, 3, 7, 2 },     // testea: change({2,5,10}, 3, 7) == 2

@@ -27,24 +27,19 @@ void print_table(int n, int k, int table[n][k]) {
 int change(int d[], int n, int k) {
    int table[n+1][k+1];
 
-    for(int i = 0; i <= n; i++) {
-        for(int j = 0; j <= k; j++) {
-            if(j == 0) {
-                table[i][j] = 0;
-            } else if(i == 0) {
-                table[i][j] = INT_MAX;
-            } else {
-                table[i][j] = 0;
-            }
-        }
-    }
+   for(int i = 0; i <= n; i++) {
+    table[i][0] = 0;
+   }
+   for(int j = 0; j <= k; j++) {
+    table[0][j] = INT_MAX;
+   }
 
     for(int i = 1; i <= n; i++) {
         for(int j = 1; j <= k; j++) {
-            if(d[i-1] <= j && table[i][j - d[i-1]] != INT_MAX) {
-                table[i][j] = MIN(table[i-1][j], 1 + table[i][j - d[i-1]]);
-            } else {
+            if(d[i-1] > j) {
                 table[i][j] = table[i-1][j];
+            } else {
+                table[i][j] = MIN(table[i-1][j], 1 + table[i][j - d[i-1]]);
             }
         }
     }
