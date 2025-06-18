@@ -39,6 +39,7 @@ bool is_empty(list l) {
 }
 
 elem head(list l) {
+    assert(!is_empty(l)); // Aseguramos que la lista no esté vacía
     return l->elem;
 }
 

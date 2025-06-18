@@ -3,7 +3,7 @@
 #include "list.h"
 
 #define MAX_LENGTH 10
-#define N_TESTCASES_HEAD 3
+#define N_TESTCASES_HEAD 4
 #define N_TESTCASES_INDEX 3
 #define N_TESTCASES_LENGTH 4
 
@@ -34,6 +34,7 @@ void test_head() {
       { {-2}, 1, -2 },          // testea: head([-2]) == -2
       { {1, -2}, 2, 1 },        // testea: head([1, -2]) == 1
       { {8, 1, -2}, 3, 8 },     // testea: head([8, 1, -2]) == 8
+      { {8, 1, -2, 44}, 4, 8 }, // testea: head([8, 1, -2, 44]) == 8
     };
 
     list input;
@@ -147,6 +148,6 @@ int main() {
     test_head();
     test_index();
     test_length();
-
+    
     return 0;
 }
